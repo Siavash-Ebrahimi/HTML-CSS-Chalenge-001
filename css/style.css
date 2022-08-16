@@ -1,0 +1,173 @@
+/* CSS PERFIUM
+## Colors
+
+### Primary
+
+- Dark cyan: hsl(158, 36%, 37%)
+- Cream: hsl(30, 38%, 92%)
+
+### Neutral
+
+- Very dark blue: hsl(212, 21%, 14%)
+- Dark grayish blue: hsl(228, 12%, 48%)
+- White: hsl(0, 0%, 100%) */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --h-font-weight: 700px;
+  --primary-color-background: hsl(30, 38%, 92%);
+  --color-149: hsl(158, 36%, 37%);
+  --button-color: darkgreen;
+  --white-color: hsl(0, 0%, 100%);
+  --Secondary-color: #e0b354;
+}
+
+body {
+  background-color: var(--primary-color-background);
+  font-family: 'Fraunces', sans-serif;
+  font-weight: var(--h-font-weight);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+h1 {
+  font-weight: var(--h-font-weight);
+  font-size: 32px;
+}
+
+h2 {
+  font-weight: var(--h-font-weight);
+  font-size: 24px;
+}
+
+h3 {
+  font-weight: var(--h-font-weight);
+  font-size: 18px;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+.link__button,
+.link__button:visited,
+.link__button:active {
+  color: var(--white-color);
+}
+
+/* ------ Button -------------- */
+
+input,
+textarea,
+select,
+button {
+  font-family: system-ui;
+}
+
+button,
+.link__button {
+  border: none;
+  display: inline-block;
+  font-family: inherit;
+  background-color: black;
+  color: var(--white-color);
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
+  border-bottom: 2px solid darkgray;
+  transition: 0.4s opacity;
+}
+
+button:hover,
+button:focus,
+.link__button:hover,
+.link__button:focus {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.button__secondary,
+.link__button {
+  background-color: darkgreen;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.link__button {
+  text-align: center;
+}
+
+
+.flex {
+  display: flex;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.flex__item:last-child {
+  flex-grow: 1;
+  text-align:center;
+}
+
+.amount {
+  font-weight: var(--h-font-weight);
+  font-size: 32px;
+  color: var(--color-149);
+}
+
+.mamount {
+  margin-top: 10px;
+  text-decoration: line-through;
+}
+
+
+
+footer {
+  clear: both;
+  margin-top: 50px;
+  text-align: center;
+}
+
+
+.grid {
+  display: grid;
+  max-width: 600px;
+  margin: 0 auto;
+  /* grid-template-columns: 300px 300px 300px; fractions are better than pixels - they are responsive */
+  grid-template-columns: 1fr 1fr;
+  margin-top: 100px;
+  background-color: darkgray;
+  border-radius: 10px;
+}
+
+.p_image {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.grid__item--right {
+  background-color: var(--white-color);
+  padding: 30px;
+  line-height: 1.1;
+  text-align: justify;
+  border-radius: 10px;
+  width: 100%;
+}
+
+@media all and (max-width: 500px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media all and (max-width: 700px) {
+  .grid {
+    margin-top: 0px;
+  }
+}
