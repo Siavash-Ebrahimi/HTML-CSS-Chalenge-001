@@ -19,35 +19,24 @@
 }
 
 :root {
+  --fontfamily-Montserrat: 'Montserrat', sans-serif;
+  --fontfamily-Fraunces: 'Fraunces', serif;
   --h-font-weight: 700px;
   --primary-color-background: hsl(30, 38%, 92%);
   --color-149: hsl(158, 36%, 37%);
-  --button-color: darkgreen;
+  --button-color: #164228;
   --white-color: hsl(0, 0%, 100%);
   --Secondary-color: #e0b354;
+  --grey-color: #8f8f8f;
 }
 
 body {
   background-color: var(--primary-color-background);
-  font-family: 'Fraunces', serif;
+  font-family: var(--fontfamily-Montserrat);
   font-weight: var(--h-font-weight);
   font-size: 14px;
   line-height: 1.6;
-}
-
-h1 {
-  font-weight: var(--h-font-weight);
-  font-size: 32px;
-}
-
-h2 {
-  font-weight: var(--h-font-weight);
-  font-size: 24px;
-}
-
-h3 {
-  font-weight: var(--h-font-weight);
-  font-size: 18px;
+  color: var(--grey-color);
 }
 
 a:hover,
@@ -61,15 +50,14 @@ a:focus {
   color: var(--white-color);
 }
 
-/* ------ Button -------------- */
-
-input,
-textarea,
-select,
-button {
-  font-family: system-ui;
+.product__title {
+  font-family: var(--fontfamily-Fraunces);
+  font-weight: var(--h-font-weight);
+  font-size: 32px;
+  color: black;
 }
 
+/* ------ Button -------------- */
 button,
 .link__button {
   border: none;
@@ -80,7 +68,7 @@ button,
   text-decoration: none;
   padding: 10px;
   border-radius: 5px;
-  border-bottom: 2px solid darkgray;
+  border-bottom: 2px solid var(--button-color);
   transition: 0.4s opacity;
 }
 
@@ -94,15 +82,11 @@ button:focus,
 
 .button__secondary,
 .link__button {
-  background-color: darkgreen;
+  background-color: var(--button-color);
   width: 100%;
   margin-top: 20px;
-}
-
-.link__button {
   text-align: center;
 }
-
 
 .flex {
   display: flex;
@@ -112,10 +96,11 @@ button:focus,
 
 .flex__item:last-child {
   flex-grow: 1;
-  text-align:center;
+  text-align: center;
 }
 
 .amount {
+  font-family: var(--fontfamily-Fraunces);
   font-weight: var(--h-font-weight);
   font-size: 32px;
   color: var(--color-149);
@@ -126,14 +111,11 @@ button:focus,
   text-decoration: line-through;
 }
 
-
-
 footer {
   clear: both;
   margin-top: 50px;
   text-align: center;
 }
-
 
 .grid {
   display: grid;
@@ -155,7 +137,7 @@ footer {
   background-color: var(--white-color);
   padding: 30px;
   line-height: 1.1;
-  text-align: justify;
+  text-align: left;
   border-radius: 10px;
   width: 100%;
 }
@@ -168,6 +150,6 @@ footer {
 
 @media all and (max-width: 700px) {
   .grid {
-    margin-top: 0px;
+    margin-top: 0;
   }
 }
