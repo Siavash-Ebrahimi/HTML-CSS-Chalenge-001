@@ -29,7 +29,7 @@
 
 body {
   background-color: var(--primary-color-background);
-  font-family: 'Fraunces', sans-serif;
+  font-family: 'Fraunces', serif;
   font-weight: var(--h-font-weight);
   font-size: 14px;
   line-height: 1.6;
